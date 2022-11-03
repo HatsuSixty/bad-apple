@@ -1,5 +1,5 @@
-CFLAGS=-Wall -Wextra -std=c11 -pedantic -ggdb
-LIBS=-lm
+CFLAGS=-Wall -Wextra -std=c11 -pedantic -ggdb `pkg-config --cflags SDL2_mixer`
+LIBS=`pkg-config --libs SDL2_mixer` -lm
 
 main: main.o
 	$(CC) $(CFLAGS) -o main main.o $(LIBS)

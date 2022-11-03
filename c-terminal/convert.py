@@ -6,7 +6,7 @@ converted_data = ""
 width = 0
 height = 0
 
-with open("../python-sdl/data.json") as f:
+with open("../data.json") as f:
     data = json.load(f)
     for f, frame in enumerate(data):
         for row in frame:

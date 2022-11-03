@@ -30,10 +30,10 @@ renderer = SDL_CreateRenderer(
 SDL_RenderSetLogicalSize(renderer, LOGICAL_WIDTH, LOGICAL_HEIGHT)
 
 data = None
-with open("data.json") as f:
+with open("../data.json") as f:
     data = json.load(f)
 
-p = vlc.MediaPlayer("file://" + getcwd() + "/badapple.mp3")
+p = vlc.MediaPlayer("file://" + getcwd() + "/../badapple.mp3")
 p.play()
 
 running = True

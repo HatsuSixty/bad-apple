@@ -6,6 +6,8 @@
 #include <time.h>
 #include <unistd.h>
 
+#include <SDL2/SDL_mixer.h>
+
 #define INPUT_TXT_PATH "input.txt"
 
 #define WIDTH 36
@@ -64,6 +66,18 @@ int main(void)
     char* buffer = NULL;
     read_file_into_bytearray(&buffer, file);
     fclose(file);
+
+    int result = 0;
+    int flags = MIX_INIT_MP3;
+    if (flags != (result = Mix_Init(flags))) {
+        fprintf(stderr, "Could not initialize mixer (result: %d).\n", result);
+        fprintf(stderr, "Mix_Init: %s\n", Mix_GetError());
+        exit(1);
+    }
+
+    Mix_OpenAudio(22050, AUDIO_S16SYS, 2, 640);
+    Mix_Music *music = Mix_LoadMUS("../badapple.mp3");
+    Mix_PlayMusic(music, 1000000);
 
     size_t offset = 0;
     for (size_t f = 0; f < FRAMES; ++f) {
