@@ -42,7 +42,7 @@ for frame in data:
         break
     for y, row in enumerate(frame):
         for x, col in enumerate(row):
-            if col == 0:
+            if col == 1:
                 SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255)
             else:
                 SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255)
