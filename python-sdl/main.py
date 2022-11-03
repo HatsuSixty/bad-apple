@@ -4,6 +4,7 @@ from os import getcwd
 from time import sleep
 from sdl2 import *
 from sys import stderr
+from os.path import dirname
 import ctypes
 import json
 import vlc
@@ -33,7 +34,7 @@ data = None
 with open("../data.json") as f:
     data = json.load(f)
 
-p = vlc.MediaPlayer("file://" + getcwd() + "/../badapple.mp3")
+p = vlc.MediaPlayer("file://" + dirname(getcwd()) + "/badapple.mp3")
 p.play()
 
 running = True
@@ -55,4 +56,4 @@ for frame in data:
     SDL_RenderPresent(renderer)
     SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255)
     SDL_RenderClear(renderer)
-    sleep(1/60)
+    sleep(0.051)
