@@ -19,7 +19,7 @@ def scc(code):
 
 scc(SDL_SetHint(SDL_HINT_RENDER_SCALE_QUALITY, b"linear"))
 scc(SDL_SetHint(SDL_HINT_VIDEO_X11_NET_WM_BYPASS_COMPOSITOR, b"0"))
-window = SDL_CreateWindow(b"Counter", 0, 0,
+window = SDL_CreateWindow(b"Bad Apple!!", 0, 0,
                           WIDTH,
                           HEIGHT,
                           SDL_WINDOW_RESIZABLE)
