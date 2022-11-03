@@ -1,4 +1,4 @@
-# bad-apple
+# python-sdl
 
 It's just Bad Apple!! but played with Python.
 
