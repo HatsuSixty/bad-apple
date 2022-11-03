@@ -91,7 +91,7 @@ int main(void)
         printf("\033[%dD", WIDTH);
         fflush(stdout);
         offset += WIDTH*HEIGHT+HEIGHT;
-        msleep(51);
+        msleep(50);
     }
     printf("\033[m");
 
