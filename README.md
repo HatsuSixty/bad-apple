@@ -1,8 +1,7 @@
 # bad-apple
 
-It's just [Bad Apple!!](https://www.youtube.com/watch?v=FtutLA63Cp8) but played with python.
+It's [Bad Apple!!](https://www.youtube.com/watch?v=FtutLA63Cp8) you know.
 
 ## Quick Start
-```console
-$ ./build.sh run
-```
+
+See the README.md in each folder.
